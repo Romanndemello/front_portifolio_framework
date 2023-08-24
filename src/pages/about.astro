@@ -3,56 +3,62 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import Pill from '../components/Pill.astro';
+import Icon from '../components/Icon.astro';
 ---
 
-<BaseLayout title="About | Manuelli de Oliveira" description="About Manuelli de Oliveira Lorem Ipsum">
+<BaseLayout title="Sobre | Manuelli de Oliveira" description="About Manuelli de Oliveira Lorem Ipsum">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="Sobre"
+				tagline="Obrigado por ter vindo até aqui! Abaixo conto um pouco sobre mim e meus objetivos profissionais."
 			>
 				<img
 					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
+					height="773"
+					src="/assets/foto.jpg"
 					alt="Manuelli de Oliveira at work with a colleague"
 				/>
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Sobre</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Estou sempre disposta a adquirir conhecimento e novas
+						experiências, buscando meu desenvolvimento pessoal e
+						profissional, independentemente da área de atuação.
+						Gosto de trabalhos em equipe, análise, comunicação e
+						principalmente atividades que envolvam imaginação e
+						inovação.
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Ensino</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<p>Bacharelado de Biomedicina | Universidade do Vale dos Sinos</p>
+					<p>Ensino Médio | Escola Estadual de Ensino Médio Amadeo Rossi</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
+				<h2 class="section-title">Habilidades</h2>
+				<div class="roles">
+					<Pill><Icon icon="excel-logo" size="1.33em" /> Microsoft Excel</Pill>
+					<Pill><Icon icon="archive" size="1.33em" /> Microsoft Office</Pill>
+					<Pill><Icon icon="html-logo" size="1.33em" /> HTML</Pill>
+					<Pill><Icon icon="css-logo" size="1.33em" /> CSS</Pill>
+					<Pill><Icon icon="js-logo" size="1.33em" /> Javascript</Pill>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title"></h2>
+				<div class="roles">
+					<Pill><Icon icon="creativity" size="1.33em" /> Criatividade</Pill>
+					<Pill><Icon icon="rocket-launch" size="1.33em" /> Proatividade</Pill>
+					<Pill><Icon icon="users" size="1.33em" /> Trabalho em equipe</Pill>
+					<Pill><Icon icon="flex" size="1.33em" /> Flexibilidade e Resiliência</Pill>
 				</div>
 			</section>
 		</main>
@@ -106,6 +112,12 @@ import Hero from '../components/Hero.astro';
 		.about {
 			display: grid;
 			grid-template-columns: 1fr 60% 1fr;
+		}
+		
+		.roles {
+			margin-top: 0.01rem;
+			display: flex;
+			gap: 0.5rem;
 		}
 
 		.about > :global(:first-child) {
